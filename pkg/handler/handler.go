@@ -19,11 +19,11 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
 
 	config := cors.Config{
-		AllowAllOrigins: true,
-		AllowHeaders: []string{"Authorization"},
-		AllowMethods: []string{"PUT", "DELETE", "GET", "POST"},
+		AllowAllOrigins:  true,
+		AllowHeaders:     []string{"Authorization"},
+		AllowMethods:     []string{"PUT", "DELETE", "GET", "POST"},
 		AllowCredentials: true,
-		MaxAge: 12 * time.Hour,
+		MaxAge:           12 * time.Hour,
 	}
 
 	router.Use(cors.New(config))
